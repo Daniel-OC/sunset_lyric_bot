@@ -16,13 +16,13 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # interval = 60
 
-# while True:
-# print("about to tweet a lyric")
-  # fetch a tweet from the api
-tweet = requests.get(url = "https://selling-sunset-lyrics-api.herokuapp.com/api/v1/lyrics/random").json()
+while True:
+  print("about to tweet a lyric")
+# fetch a tweet from the api
+  tweet = requests.get(url = "https://selling-sunset-lyrics-api.herokuapp.com/api/v1/lyrics/random").json()
   
   # tweet
-api.update_status(tweet)
-  # time.sleep(interval)
+  api.update_status(tweet)
+  time.sleep(interval)
 
 
